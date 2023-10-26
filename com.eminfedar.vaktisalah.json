@@ -1,14 +1,15 @@
 {
     "id": "com.eminfedar.vaktisalah",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-23.08",
     "sdk": "org.kde.Sdk",
     "command": "vaktisalah",
     "finish-args": [
         "--share=network",
         "--socket=pulseaudio",
         "--share=ipc",
-        "--socket=x11",
+        "--socket=wayland",
+        "--socket=fallback-x11",
         "--device=dri"
     ],
 
