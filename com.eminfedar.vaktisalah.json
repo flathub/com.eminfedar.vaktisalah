@@ -4,10 +4,33 @@
     "runtime-version": "5.15-23.08",
     "sdk": "org.kde.Sdk",
     "command": "vaktisalah",
-    "finish-args": [],
+    "finish-args": [
+        "--share=network",
+        "--socket=pulseaudio",
+        "--share=ipc",
+        "--socket=x11",
+        "--device=dri"
+    ],
 
-    "modules": [],
-
+    "modules": [
+        {
+            "name": "vaktisalah",
+            "buildsystem": "qmake",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/eminfedar/vaktisalah.git",
+                    "tag": "v1.4.6"
+                }
+            ],
+            "post-install": [
+                "install -Dm644 export/com.eminfedar.vaktisalah.svg /app/share/icons/hicolor/scalable/apps/com.eminfedar.vaktisalah.svg",
+                "install -Dm644 export/com.eminfedar.vaktisalah.desktop /app/share/applications/com.eminfedar.vaktisalah.desktop",
+                "install -Dm644 export/com.eminfedar.vaktisalah.appdata.xml /app/share/metainfo/com.eminfedar.vaktisalah.appdata.xml"
+            ]
+        }
+    ]
+    
     "end-of-life": "This application is no longer maintained, newer version is available on Flathub.",
     "end-of-life-rebase": "io.github.eminfedar.vaktisalah-gtk-rs"
 }
