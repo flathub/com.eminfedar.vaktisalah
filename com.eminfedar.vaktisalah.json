@@ -29,8 +29,5 @@
                 "install -Dm644 export/com.eminfedar.vaktisalah.appdata.xml /app/share/metainfo/com.eminfedar.vaktisalah.appdata.xml"
             ]
         }
-    ],
-    
-    "end-of-life": "This application is no longer maintained, newer version is available on Flathub.",
-    "end-of-life-rebase": "io.github.eminfedar.vaktisalah-gtk-rs"
+    ]
 }
