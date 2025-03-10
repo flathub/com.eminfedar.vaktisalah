@@ -29,5 +29,5 @@
                 "install -Dm644 export/com.eminfedar.vaktisalah.appdata.xml /app/share/metainfo/com.eminfedar.vaktisalah.appdata.xml"
             ]
         }
-    ],
+    ]
 }
